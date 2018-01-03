@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+## Version Info
+
+iview -> v2.8.0
+vue -> v2.5.2
+
 ## Build Setup
 
 ``` bash
