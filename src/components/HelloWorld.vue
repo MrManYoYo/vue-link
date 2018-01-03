@@ -5,11 +5,12 @@
     <ul>
       <li>awesome-vue</li>
     </ul>
+    <Button type="primary">123</Button>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
@@ -18,15 +19,8 @@ export default {
     }
   },
   methods: {
-    update () {
-      axios.get('/mock/data.json')
-        .then(res => {
-          console.log(res)
-        })
-    }
   },
   mounted () {
-    this.update()
   }
 }
 </script>
