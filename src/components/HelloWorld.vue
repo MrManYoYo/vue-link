@@ -5,12 +5,15 @@
     <ul>
       <li>awesome-vue</li>
     </ul>
-    <Button type="primary">123</Button>
+    <Button 
+      @click="getDataHandler"
+      type="primary"
+    >123</Button>
   </div>
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   data () {
@@ -19,6 +22,12 @@ export default {
     }
   },
   methods: {
+    getDataHandler () {
+      axios.get('/mock/data.json')
+        .then(res => {
+          console.log(res)
+        })
+    }
   },
   mounted () {
   }
