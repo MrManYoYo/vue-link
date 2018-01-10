@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+import mock from 'mockjs'
 export default {
   name: 'HelloWorld',
   data () {
@@ -23,13 +24,21 @@ export default {
   },
   methods: {
     getDataHandler () {
-      axios.get('/mock/data.json')
-        .then(res => {
-          console.log(res)
-        })
+      // axios.get('/mock/data.json')
+      //   .then(res => {
+      //     console.log(res)
+      //   })
+      this.$store.dispatch('updateName', '123')
+      console.log(this.$store.getters.getName)
     }
   },
   mounted () {
+    let _data = mock.mock({
+      'list|1-10': [{
+        'id|+1': 1
+      }]
+    })
+    console.log(_data)
   }
 }
 </script>
