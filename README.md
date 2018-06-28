@@ -1,6 +1,6 @@
 # vue-link
 
-> A Vue.js project
+> Vue框架空模板，包含vuex、vue-router、tfetch
 
 ## Build Setup
 
